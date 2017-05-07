@@ -1,0 +1,88 @@
+---
+layout: default
+title: Sarah Judge Bawss of All Tings
+skills:
+    - name: Web Development
+      description: asdfgh asdfgh asdfgh
+      icon: leaf
+    - name: Graphic Design
+      description: asdfgh asdfgh asdfgh
+      icon: leaf
+    - name: UX Stretgy
+      description: asdfgh asdfgh asdfgh
+      icon: leaf
+    - name: Marketing Strategy
+      description: asdfgh asdfgh asdfgh
+      icon: leaf
+    - name: Social Media
+      description: asdfgh asdfgh asdfgh
+      icon: leaf
+    - name: Photography
+      description: asdfgh asdfgh asdfgh
+      icon: leaf
+experience:
+    - year: 2017
+      name: Lorem ipsum Dolo amet
+      description: asdfg asdfg asdfg
+    - year: 2017
+      name: Lorem ipsum Dolo amet
+      description: asdfg asdfg asdfg
+    - year: 2017
+      name: Lorem ipsum Dolo amet
+      description: asdfg asdfg asdfg
+---
+
+
+            <section class="about">
+                <div>
+                    <h2>About Me</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </section>
+
+
+            <!-----SECTION WITH GRID----->
+            <section class="skills">
+                <h2 class="col-12"> My Skills</h2>
+                <div class="grid">
+
+                {% for skill in page.skills %}
+                <div class="col-4"> <!---First Skill--->
+                    <i class="fa fa-{{ skill.icon}}"></i>
+                    <h3 class="editable">{{skill.name}}</h3>
+                    <p class="editable">{{skill.description}}</p>
+                </div>
+
+                   {% endfor %}
+
+                </div>
+            </section>
+
+
+
+
+            <section> MAP IFRAME </section>
+
+
+
+
+            <section class="experience grid">
+
+                <h2 class="col-12"> My Experience</h2>
+                  {% for experience in page.experience %}
+                <div  class="col-2">
+
+                    <h3>{{experience.year}}</h3>
+                </div>
+                <div  class="col-4">
+                    <h3>{{experience.name}}</h3> <!----First experience--->
+                    <h4 class="col-12"> Dolo amet</h4>
+                </div>
+                <div class="col-6">
+                    <p >{{experience.description}}</p>
+                </div>
+
+                {% endfor %}
+
+
+            </section>
